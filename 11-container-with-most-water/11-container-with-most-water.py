@@ -1,6 +1,6 @@
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        localMaxArea, globalMaxArea = 0, 0
+        localMaxArea, globalMaxArea = 0, float(-inf)
         left, right = 0, len(height) - 1
         
         while left < right:
