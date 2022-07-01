@@ -1,5 +1,6 @@
 class Solution:
     def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) -> int:
+        # Fractional Knapsack Problem
         boxTypes.sort(key=lambda box: box[1], reverse=True)
         totalUnits, i = 0, 0
         
