@@ -9,5 +9,6 @@ class Solution:
                 left += 1
             else:
                 right -= 1
+                
             globalMaxArea = max(localMaxArea, globalMaxArea)
         return globalMaxArea
