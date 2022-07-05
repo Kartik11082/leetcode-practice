@@ -7,8 +7,8 @@ class Solution:
             else:
                 hm[c] += 1
         
-        for k, v in hm.items():
-            if v == 0:
-                return s.index(k)
+        for key, value in hm.items():
+            if value == 0:
+                return s.index(key)
         
         return -1
