@@ -5,12 +5,12 @@ class Solution:
             if c not in lastOf:
                 lastOf[c] = s.rindex(c)
         
-        res = []
+        result = []
         size, end = 0, 0
         for i, c in enumerate(s):
             size += 1
             end = max(end, lastOf[c])
             if end == i:
-                res.append(size)
+                result.append(size)
                 size = 0
-        return res
+        return result
