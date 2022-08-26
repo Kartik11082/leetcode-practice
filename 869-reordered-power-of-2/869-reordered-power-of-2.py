@@ -6,6 +6,7 @@ class Solution:
         while n <= 10**9:
             n = 2**i
             d = Counter([int(i) for i in str(n)])
+            print(d, " : ", c)
             if c == d:
                 return True
             i += 1
