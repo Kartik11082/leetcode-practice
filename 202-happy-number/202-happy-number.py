@@ -5,10 +5,11 @@ class Solution:
             for n in str(num):
                 sum += (int(n)) ** 2
             return sum
-        numList = []
-        while getSumOfSquares(n) not in numList:
+
+        visited = set()
+        while getSumOfSquares(n) not in visited:
             if getSumOfSquares(n) == 1:
                 return True
-            numList.append(getSumOfSquares(n))
+            visited.add(getSumOfSquares(n))
             n = getSumOfSquares(n)
         return False
