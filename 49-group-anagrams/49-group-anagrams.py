@@ -5,15 +5,13 @@ class Solution:
         elif len(strs) == 1:
             return [strs]
 
-        sStrs = []
         hashMap = {}
         for word in strs:
             key = "".join(sorted(word))
-            value = word
             if key in hashMap:
-                hashMap[key].append(value)
+                hashMap[key].append(word)
             elif key not in hashMap:
-                hashMap[key] = [value]
+                hashMap[key] = [word]
                 
         res = []
         for value in hashMap.values():
