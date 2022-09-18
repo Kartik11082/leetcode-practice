@@ -8,8 +8,7 @@ class Solution:
         res = []
         for i in range((len(hashMap.values())) - k):
             hashMap.popitem()
-        print(hashMap)
 
         for i in range(len(hashMap.values())):
             res.append(hashMap.popitem()[0])
-        return (res)
+        return res
