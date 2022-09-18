@@ -9,8 +9,10 @@ class Solution(object):
             if b in op:
                 st.append(b)
             elif b in cl:
+                # Check if the brackets are matching
                 if st and (cl.index(b) == op.index(st[-1])):
                     st.pop()
+                # Means the opening and closing are not same
                 else:
                     return False
         if not st:
